@@ -1,0 +1,62 @@
+From 76a4a7b2b355592aaa306f72a7a2f026df4b943a Mon Sep 17 00:00:00 2001
+From: ucityworld <ucityworld@bmvitek.com>
+Date: Mon, 30 May 2016 11:54:32 +0900
+Subject: [PATCH] make borad config
+
+---
+ board/freescale/mx6bmr1/Kconfig     | 6 +++---
+ board/freescale/mx6bmr1/MAINTAINERS | 6 +++---
+ configs/mx6dlsabresd_defconfig      | 2 +-
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/board/freescale/mx6bmr1/Kconfig b/board/freescale/mx6bmr1/Kconfig
+index 0ab6f05..e87dea0 100644
+--- a/board/freescale/mx6bmr1/Kconfig
++++ b/board/freescale/mx6bmr1/Kconfig
+@@ -1,12 +1,12 @@
+-if TARGET_MX6BMR1
++if TARGET_MX6SABRESD
+ 
+ config SYS_BOARD
+-	default "mx6bmr1"
++	default "mx6sabresd"
+ 
+ config SYS_VENDOR
+ 	default "freescale"
+ 
+ config SYS_CONFIG_NAME
+-	default "mx6bmr1"
++	default "mx6sabresd"
+ 
+ endif
+diff --git a/board/freescale/mx6bmr1/MAINTAINERS b/board/freescale/mx6bmr1/MAINTAINERS
+index 4b32a97..0011ec7 100644
+--- a/board/freescale/mx6bmr1/MAINTAINERS
++++ b/board/freescale/mx6bmr1/MAINTAINERS
+@@ -1,8 +1,8 @@
+ MX6SABRESD BOARD
+ M:	Fabio Estevam <fabio.estevam@freescale.com>
+ S:	Maintained
+-F:	board/freescale/mx6bmr1/
+-F:	include/configs/mx6bmr1.h
+-F:	configs/mx6bmr1_defconfig
++F:	board/freescale/mx6sabresd/
++F:	include/configs/mx6sabresd.h
++F:	configs/mx6dlsabresd_defconfig
+ F:	configs/mx6qsabresd_defconfig
+ F:	configs/mx6sabresd_spl_defconfig
+diff --git a/configs/mx6dlsabresd_defconfig b/configs/mx6dlsabresd_defconfig
+index 340dd9c..6610a0c 100644
+--- a/configs/mx6dlsabresd_defconfig
++++ b/configs/mx6dlsabresd_defconfig
+@@ -1,6 +1,6 @@
+ CONFIG_ARM=y
+ CONFIG_ARCH_MX6=y
+-CONFIG_TARGET_MX6SABRESD=n
++CONFIG_TARGET_MX6SABRESD=y
+ CONFIG_SYS_EXTRA_OPTIONS="IMX_CONFIG=board/freescale/mx6sabresd/mx6dlsabresd.cfg,MX6DL"
+ # CONFIG_CMD_IMLS is not set
+ # CONFIG_CMD_FLASH is not set
+-- 
+1.9.1
+
